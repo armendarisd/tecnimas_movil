@@ -13,11 +13,11 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
-      title: 'Reto 2- Grupo2',
+      title: 'Tecni+',
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const MyHomePage(title: "Vans"),
+      home: const MyHomePage(title: "Tecni+"),
       debugShowCheckedModeBanner: false,
     );
   }
