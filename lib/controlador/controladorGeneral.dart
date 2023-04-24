@@ -7,14 +7,14 @@ class controladorGeneral extends GetxController {
   @override
   void onInit() {
     pro.add(productos(
-        1, "Camiseta Stranger", "assets/images/imagen1.jpg", 0, 80000));
+        1, "Mantenimiento aire acondicionado", "assets/images/imagen1.jpg", 0, 80000));
     pro.add(productos(
-        2, "Camiseta Clasica Vans", "assets/images/imagen2.jpg", 0, 70000));
+        2, "Limpieza colchón", "assets/images/imagen2.jpg", 0, 70000));
     pro.add(
-        productos(3, "Sudadera Vans", "assets/images/imagen4.jpg", 0, 120000));
-    pro.add(productos(4, "Camiseta IT", "assets/images/imagen3.jpg", 0, 85000));
+        productos(3, "Limpieza muebles", "assets/images/imagen4.jpg", 0, 120000));
+    pro.add(productos(4, "Limpieza cortinas", "assets/images/imagen3.jpg", 0, 85000));
     pro.add(productos(
-        5, "Camiseta Divine Energy", "assets/images/imagen5.jpg", 0, 80000));
+        5, "Limpieza superficies", "assets/images/imagen5.jpg", 0, 80000));
 
     // TODO: implement onInit
     super.onInit();
