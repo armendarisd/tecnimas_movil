@@ -38,61 +38,78 @@ class _pag1_inicioState extends State<pag1_inicio> {
     return Container(
       color: Color.fromARGB(255, 255, 255, 255),
       child: Center(
+        child: SingleChildScrollView(
           child: Column(
-        children: [
-          const SizedBox(
-            width: 50,
-            height: 50,
-          ),
-          const Image(image: AssetImage("assets/images/logo1.png"), width: 300),
-          const SizedBox(
-            width: 40,
-            height: 40,
-          ),
-          Image(image: AssetImage("assets/images/cuadros.jpg")),
-          Row(
-            mainAxisSize: MainAxisSize.min,
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            crossAxisAlignment: CrossAxisAlignment.center,
-            // verticalDirection: VerticalDirection.up,
             children: [
-              Container(
-                  width: 30,
-                  child: IconButton(
-                      key: Key("arrowLeft"),
-                      iconSize: 30,
-                      alignment: Alignment.center,
-                      onPressed: decrement,
-                      icon: Image(
-                        image: AssetImage("assets/images/arrowL.png"),
-                        width: 50,
-                        color: Colors.black,
-                      ))),
-              Container(
-                alignment: Alignment.center,
-                child: Image(
-                    key: Key("serviceImage"),
-                    image: AssetImage(Control.pro[_counter].imagen),
-                    width: 295),
+              const SizedBox(
+                width: 10,
+                height: 10,
               ),
-              Container(
-                width: 30,
-                child: IconButton(
-                    key: Key("arrowRight"),
-                    iconSize: 30,
-                    alignment: Alignment.center,
-                    onPressed: increment,
-                    icon: Image(
-                      image: AssetImage("assets/images/arrowR.png"),
-                      width: 50,
-                      color: Colors.black,
-                    )),
-              )
+              const Image(
+                  image: AssetImage("assets/images/logo1.png"), 
+                  width: 300),
+              const SizedBox(
+                width: 10,
+                height: 10,
+              ),
+              Image(image: AssetImage("assets/images/cuadros.jpg")),
+              const SizedBox(height: 16),
+              Form(
+                child: Column(
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 16),
+                      child: TextFormField(
+                        keyboardType: TextInputType.emailAddress,
+                        decoration: const InputDecoration(
+                          labelText: 'Número de celular',
+                        ),
+                        validator: (value) {
+                          if (value == null || value.isEmpty) {
+                            return 'Por favor introduzca el número de celular';
+                          }
+                          return null;
+                        },
+                      ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 16),
+                      child: TextFormField(
+                        obscureText: true,
+                        decoration: const InputDecoration(
+                          labelText: 'Contraseña',
+                        ),
+                        validator: (value) {
+                          if (value == null || value.isEmpty) {
+                            return 'Por favor introduzca la contraseña';
+                          }
+                          return null;
+                        },
+                      ),
+                    ),
+                    const SizedBox(height: 16),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        ElevatedButton(
+                          onPressed: () {},
+                          child: const Text('Login'),
+                        ),
+                        SizedBox(width: 10),
+                        ElevatedButton(
+                          onPressed: () {},
+                          child: const Text('Sign up'),
+                        ),
+                      ],
+                    )
+                  ],
+                ),
+              ),
+              Image(image: AssetImage("assets/images/cuadros.jpg")),
             ],
           ),
-          Image(image: AssetImage("assets/images/cuadros.jpg")),
-        ],
-      )),
+        ),
+      ),
     );
   }
 }

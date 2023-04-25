@@ -35,23 +35,23 @@ class _menuState extends State<menu> {
                 child: ListView(children: [
               ListTile(
                 leading: Icon(Icons.home),
-                title: Text("Inicio"),
+                title: Text("1 Registre su dirección"),
                 onTap: () {
                   Navigator.pop(context);
                   Control.cambiarposicion(0);
                 },
               ),
               ListTile(
-                leading: Icon(Icons.shopify),
-                title: Text("Comprar"),
+                leading: Icon(Icons.shopping_cart),
+                title: Text("2 Seleccione los servicios"),
                 onTap: () {
                   Navigator.pop(context);
                   Control.cambiarposicion(1);
                 },
               ),
               ListTile(
-                leading: Icon(Icons.shopping_cart),
-                title: Text("Mis Productos"),
+                leading: Icon(Icons.shopify),
+                title: Text("3 Pague sus servicios"),
                 onTap: () {
                   Navigator.pop(context);
                   Control.cambiarposicion(2);
